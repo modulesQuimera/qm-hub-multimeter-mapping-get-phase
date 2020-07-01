@@ -1,0 +1,25 @@
+{
+  "name": "qm-hub-multimeter-mapping-get-phase",
+  "version": "1.0.0",
+  "description": "multimeter mapping get-phase module - Node-Red",
+  "main": "mapping-get-phase.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/modulesQuimera/qm-hub-multimeter-mapping-get-phase.git"
+  },
+  "keywords": ["quimera", "hub", "JIG"],
+  "author": "HUB-LSE",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/modulesQuimera/qm-hub-multimeter-mapping-get-phase/issues"
+  },
+  "homepage": "https://github.com/modulesQuimera/qm-hub-multimeter-mapping-get-phase#readme",
+  "node-red": {
+		"nodes": {
+			"mapping-get-phase": "mapping-get-phase.js"
+		}
+	}
+}
