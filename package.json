@@ -1,6 +1,6 @@
 {
   "name": "qm-multimeter-mapping-get-phase",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "multimeter mapping get-phase module - Node-Red",
   "main": "mapping-get-phase.js",
   "scripts": {

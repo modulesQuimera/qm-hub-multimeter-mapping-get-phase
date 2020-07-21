@@ -1,11 +1,11 @@
 <style>
     .label-respA{
-        width: 29% !important;
+        width: 32% !important;
         margin-right: 15px !important;
     }
 
     .label-respB{
-        width: 29% !important;
+        width: 32% !important;
         margin-right: 15px !important;
     }
 
@@ -31,10 +31,15 @@
 </style>
 
 <script type="text/html" data-template-name="mapping-get-phase">
-    <!-- <div class="form-row">
-        <label for="node-config-input-name"><i class="fa fa-tag"></i> Name</label>
-        <input type="text" id="node-config-input-name" style="width:87%; margin-left: -45px">
-    </div> -->
+    <div class="form-row columm">
+        <label  for="node-config-input-name"><i class="fa fa-tag"></i> Mapping Name</label>
+        <input type="text" id="node-config-input-name" style="width:80%;">
+    </div>
+    <div class="form-row columm">
+        <label  for="node-config-input-slot"><i class="fa fa-sliders"></i> Slot</label>
+        <input min="0" type="number" id="node-config-input-slot" style="width:20%;">
+    </div>
+    <hr class="hr-full">
     <h2>SLOT 1 Multimeter modular mapping - getPhase</h2>
 
     <div class="global"></div>
@@ -136,61 +141,62 @@
     RED.nodes.registerType('mapping-get-phase',{
         category: 'config',
         defaults: {
-            name: {value:"Multimeter modular slot 1 mapping - getPhase"},
-            labelPort1: {value: "TP", required: true},
-            valuePort1: {value: "0", required: true},
-            labelPort2: {value: "TP", required: true},
-            valuePort2: {value: "1", required: true},
-            labelPort3: {value: "TP", required: true},
-            valuePort3: {value: "2", required: true},
-            labelPort4: {value: "TP", required: true},
-            valuePort4: {value: "3", required: true},
-            labelPort5: {value: "TP", required: true},
-            valuePort5: {value: "4", required: true},
-            labelPort6: {value: "TP", required: true},
-            valuePort6: {value: "5", required: true},
-            labelPort7: {value: "TP", required: true},
-            valuePort7: {value: "6", required: true},
-            labelPort8: {value: "TP", required: true},
-            valuePort8: {value: "7", required: true},
-            labelPort9: {value: "TP", required: true},
-            valuePort9: {value: "8", required: true},
-            labelPort10: {value: "TP", required: true},
-            valuePort10: {value: "9", required: true},
-            labelPort11: {value: "TP", required: true},
-            valuePort11: {value: "10", required: true},
-            labelPort12: {value: "TP", required: true},
-            valuePort12: {value: "11", required: true},
-            labelPort13: {value: "TP", required: true},
-            valuePort13: {value: "12", required: true},
-            labelPort14: {value: "TP", required: true},
-            valuePort14: {value: "13", required: true},
-            labelPort15: {value: "TP", required: true},
-            valuePort15: {value: "14", required: true},
-            labelPort16: {value: "TP", required: true},
-            valuePort16: {value: "15", required: true},
-            labelPort17: {value: "TP", required: true},
-            valuePort17: {value: "16", required: true},
-            labelPort18: {value: "TP", required: true},
-            valuePort18: {value: "17", required: true},
-            labelPort19: {value: "TP", required: true},
-            valuePort19: {value: "18", required: true},
-            labelPort20: {value: "TP", required: true},
-            valuePort20: {value: "19", required: true},
-            labelPort21: {value: "TP", required: true},
-            valuePort21: {value: "20", required: true},
-            labelPort22: {value: "TP", required: true},
-            valuePort22: {value: "21", required: true},
-            labelPort23: {value: "TP", required: true},
-            valuePort23: {value: "22", required: true},
-            labelPort24: {value: "TP", required: true},
-            valuePort24: {value: "23", required: true},
-            labelPort25: {value: "TP", required: true},
-            valuePort25: {value: "24", required: true},
-            labelPort26: {value: "TP", required: true},
-            valuePort26: {value: "25", required: true},
-            labelPort27: {value: "TP", required: true},
-            valuePort27: {value: "26", required: true},
+            name: {value:""},
+            slot:{value:"", required:true},
+            labelPort1: {value: ""},
+            valuePort1: {value: "0"},
+            labelPort2: {value: ""},
+            valuePort2: {value: "1"},
+            labelPort3: {value: ""},
+            valuePort3: {value: "2"},
+            labelPort4: {value: ""},
+            valuePort4: {value: "3"},
+            labelPort5: {value: ""},
+            valuePort5: {value: "4"},
+            labelPort6: {value: ""},
+            valuePort6: {value: "5"},
+            labelPort7: {value: ""},
+            valuePort7: {value: "6"},
+            labelPort8: {value: ""},
+            valuePort8: {value: "7"},
+            labelPort9: {value: ""},
+            valuePort9: {value: "8"},
+            labelPort10: {value: ""},
+            valuePort10: {value: "9"},
+            labelPort11: {value: ""},
+            valuePort11: {value: "10"},
+            labelPort12: {value: ""},
+            valuePort12: {value: "11"},
+            labelPort13: {value: ""},
+            valuePort13: {value: "12"},
+            labelPort14: {value: ""},
+            valuePort14: {value: "13"},
+            labelPort15: {value: ""},
+            valuePort15: {value: "14"},
+            labelPort16: {value: ""},
+            valuePort16: {value: "15"},
+            labelPort17: {value: ""},
+            valuePort17: {value: "16"},
+            labelPort18: {value: ""},
+            valuePort18: {value: "17"},
+            labelPort19: {value: ""},
+            valuePort19: {value: "18"},
+            labelPort20: {value: ""},
+            valuePort20: {value: "19"},
+            labelPort21: {value: ""},
+            valuePort21: {value: "20"},
+            labelPort22: {value: ""},
+            valuePort22: {value: "21"},
+            labelPort23: {value: ""},
+            valuePort23: {value: "22"},
+            labelPort24: {value: ""},
+            valuePort24: {value: "23"},
+            labelPort25: {value: ""},
+            valuePort25: {value: "24"},
+            labelPort26: {value: ""},
+            valuePort26: {value: "25"},
+            labelPort27: {value: ""},
+            valuePort27: {value: "26"},
         },
         label: function() { return this.name || "" },
     });
