@@ -1,11 +1,11 @@
 <style>
     .label-respA{
-        width: 32% !important;
+        width: 35% !important;
         margin-right: 15px !important;
     }
 
     .label-respB{
-        width: 32% !important;
+        width: 35% !important;
         margin-right: 15px !important;
     }
 
@@ -199,6 +199,10 @@
             valuePort27: {value: "26"},
         },
         label: function() { return this.name || "" },
+        oneditresize: function() {
+            console.log("oiiiiiiiiiiiiiiiii")
+            $("#red-ui-editor-config-scope").val($("#red-ui-editor-config-scope option:first").val());
+        },
     });
 </script>
 
